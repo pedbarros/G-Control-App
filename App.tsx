@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <StatusBar barStyle="light-content" backgroundColor="#000" />
 
       <NavigationContainer>
-        <AuthContext.Provider value={{ signed: true }}>
+        <AuthContext.Provider value={{ signed: false }}>
           <Routes />
         </AuthContext.Provider>
       </NavigationContainer>
