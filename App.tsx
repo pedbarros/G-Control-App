@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native'
-import { StatusBar, View,Text } from 'react-native';
+import { StatusBar } from 'react-native';
+import Routes from './src/routes';
 
 const App: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const App: React.FC = () => {
       <StatusBar barStyle="light-content" backgroundColor="#000" />
 
       <NavigationContainer>
-        <View><Text>Ok google</Text></View>
+        <Routes />
       </NavigationContainer>
     </>
   );
