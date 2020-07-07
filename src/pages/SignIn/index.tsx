@@ -5,10 +5,7 @@ import { useAuth } from "../../contexts/auth";
 
 const SignIn: React.FC = () => {
 
-  const { signIn, user } = useAuth();
-
-  console.log(user);
-  
+  const { signIn, user } = useAuth();  
 
   function handleSignIn() {
     signIn();
