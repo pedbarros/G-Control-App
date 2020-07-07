@@ -1,10 +1,11 @@
 import React, { useContext }from 'react';
 import {View, Button, StyleSheet} from 'react-native';
-import AuthContext from '../../contexts/auth';
+import { useAuth } from "../../contexts/auth";
+
 
 const SignIn: React.FC = () => {
 
-  const { signIn, user } = useContext(AuthContext);
+  const { signIn, user } = useAuth();
 
   console.log(user);
   

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
-import AuthContext from '../../contexts/auth';
+import React from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
+import { useAuth } from "../../contexts/auth";
 
 const Dashboard: React.FC = () => {
-  const { user, signOut } = useContext(AuthContext);
+  const { user, signOut } = useAuth();
 
   function handleSignOut() {
     signOut();
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    alignItems: "center",
   },
 });
 
