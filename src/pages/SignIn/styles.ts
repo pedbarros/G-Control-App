@@ -1,12 +1,19 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 export const Wrapper = styled.SafeAreaView`
   background: #2248f1;
   flex: 1;
 `;
 
-export const Container = styled.ScrollView`
+export const Container = styled.ScrollView.attrs(() => ({
+  contentContainerStyle: {
+    flexGrow: 1,
+  },
+}))`
   padding: 15px;
+`;
+
+export const FormContainer = styled.View`
 `;
 
 export const Img = styled.Image`
@@ -17,7 +24,6 @@ export const Img = styled.Image`
 export const InputContainer = styled.View`
   flex: 1;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
@@ -25,10 +31,14 @@ export const InputContainer = styled.View`
   margin-bottom: 10px;
 `;
 
-export const EmailInput = styled.TextInput`
+export const Input = styled.TextInput`
   flex: 1;
   padding: 10px;
-`; 
+`;
+
+export const StatePicker = styled.Picker`
+  flex: 1;
+`;
 
 export const SignInButton = styled.TouchableOpacity`
   flex-direction: row;
@@ -40,10 +50,11 @@ export const SignInButton = styled.TouchableOpacity`
 
 export const SignInLabel = styled.Text`
   color: #fff;
-  align-self: center;
+  text-align: center;
   font-weight: bold;
   font-size: 16px;
   padding: 15px;
+  flex: 1;
 `;
 
 export const ForgotPasswordButton = styled.TouchableOpacity`
@@ -55,8 +66,34 @@ export const ForgotPasswordButton = styled.TouchableOpacity`
 
 export const ForgotPasswordLabel = styled.Text`
   color: #5574ff;
-  align-self: center;
+  text-align: center;
   font-weight: bold;
   font-size: 16px;
   padding: 15px;
+  flex: 1;
+`;
+
+export const CreateFreeButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 15px;
+`;
+
+export const CreateFreeLabel = styled.Text`
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px;
+  flex: 1;
+  margin-bottom: auto;
+`;
+
+export const TermsAndConditionContainer = styled.View`
+  flex: 1;
+  justify-content: flex-end;
+`;
+
+export const TermsAndConditionLabel = styled.Text`
+  color: #fff;
 `;
