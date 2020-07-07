@@ -4,13 +4,18 @@ import AuthContext from '../../contexts/auth';
 
 const SignIn: React.FC = () => {
 
-  const { signed } = useContext(AuthContext);
+  const { signIn, user } = useContext(AuthContext);
 
-  console.log(signed);
+  console.log(user);
+  
+
+  function handleSignIn() {
+    signIn();
+  }
 
   return (
     <View style={styles.container}>
-      <Button title="Sign In" onPress={() => {}} />
+      <Button title="Sign In" onPress={handleSignIn} />
     </View>
   );
 };
