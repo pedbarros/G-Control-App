@@ -1,17 +1,28 @@
+import { AntDesign, Entypo, Feather, Fontisto } from '@expo/vector-icons';
 import React, { useState } from 'react';
-import { useAuth } from "../../contexts/auth";
-import {
-  Wrapper, Container, Img, InputContainer,
-  Input, StatePicker, SignInButton, SignInLabel,
-  ForgotPasswordButton, ForgotPasswordLabel, CreateFreeButton, CreateFreeLabel,
-  TermsAndConditionLabel, FormContainer, TermsAndConditionContainer
-} from './styles';
-import { Entypo, AntDesign, Feather, Fontisto } from '@expo/vector-icons';
-import logo from '../../assets/logo.png';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import logo from '../../assets/logo.png';
+import { useAuth } from '../../contexts/auth';
+import {
+  Container,
+  CreateFreeButton,
+  CreateFreeLabel,
+  ForgotPasswordButton,
+  ForgotPasswordLabel,
+  FormContainer,
+  Img,
+  Input,
+  InputContainer,
+  SignInButton,
+  SignInLabel,
+  StatePicker,
+  TermsAndConditionContainer,
+  TermsAndConditionLabel,
+  Wrapper,
+} from './styles';
 
 const SignIn: React.FC = () => {
-  const [selectedValue, setSelectedValue] = useState("brazil");
+  const [selectedValue, setSelectedValue] = useState('brazil');
   const [showPassword, setShowPassword] = useState(true);
 
   const { signIn, loading } = useAuth();
@@ -49,7 +60,11 @@ const SignIn: React.FC = () => {
             <AntDesign name="lock1" size={24} color="gray" />
             <Input secureTextEntry={showPassword} placeholder="Password" />
             <TouchableOpacity onPress={handleShowHideInput}>
-              <Feather name={showPassword ? 'eye' : 'eye-off'} size={24} color="gray" />
+              <Feather
+                name={showPassword ? 'eye' : 'eye-off'}
+                size={24}
+                color="gray"
+              />
             </TouchableOpacity>
           </InputContainer>
           <SignInButton onPress={handleSignIn}>
@@ -64,8 +79,11 @@ const SignIn: React.FC = () => {
         </FormContainer>
         <TermsAndConditionContainer>
           <TermsAndConditionLabel>
-            This service is for authorized use only. Use may be monitored recorded and audited.
-            Access and use constitutes consent to Terms and Conditions. Privacy Policy and monitoring /recording/ auditing. Unauthorized use is prohibited.</TermsAndConditionLabel>
+            This service is for authorized use only. Use may be monitored
+            recorded and audited. Access and use constitutes consent to Terms
+            and Conditions. Privacy Policy and monitoring /recording/ auditing.
+            Unauthorized use is prohibited.
+          </TermsAndConditionLabel>
         </TermsAndConditionContainer>
       </Container>
     </Wrapper>

@@ -27,7 +27,7 @@ const AuthProvider: React.FC = ({ children }) => {
       const storagedUser = await AsyncStorage.getItem('@RNAuth:user');
       const storagedToken = await AsyncStorage.getItem('@RNAuth:token');
 
-      await setTimeout(() => { }, 5000)
+      await setTimeout(() => {}, 5000);
 
       if (storagedUser && storagedToken) {
         setUser(JSON.parse(storagedUser));
@@ -57,7 +57,8 @@ const AuthProvider: React.FC = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ signed: !!user, user, loading, signIn, signOut }}>
+      value={{ signed: !!user, user, loading, signIn, signOut }}
+    >
       {children}
     </AuthContext.Provider>
   );

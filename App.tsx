@@ -13,5 +13,5 @@ const App: React.FC = () => {
       </NavigationContainer>
     </>
   );
-}
+};
 export default App;

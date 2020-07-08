@@ -3,7 +3,7 @@ interface Response {
   user: {
     name: string;
     email: string;
-  }
+  };
 }
 
 export function signIn(): Promise<Response> {
@@ -14,7 +14,7 @@ export function signIn(): Promise<Response> {
         user: {
           name: 'Pedro Barros',
           email: 'pedrobarros@hotmail.com',
-        }
+        },
       });
     }, 2000);
   });

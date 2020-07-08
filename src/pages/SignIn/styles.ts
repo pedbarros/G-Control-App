@@ -13,8 +13,7 @@ export const Container = styled.ScrollView.attrs(() => ({
   padding: 15px;
 `;
 
-export const FormContainer = styled.View`
-`;
+export const FormContainer = styled.View``;
 
 export const Img = styled.Image`
   align-self: center;

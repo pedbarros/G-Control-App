@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
@@ -9,17 +8,21 @@ const AuthStack = createStackNavigator();
 
 const AuthRoutes: React.FC = () => (
   <>
-    <StatusBar backgroundColor='#2248f1' barStyle='light-content' />
-    <AuthStack.Navigator >
-      <AuthStack.Screen name="SignIn" component={SignIn} options={{
-        title: 'Log In',
-        headerStyle: {
-          backgroundColor: '#2248f1'
-        },
-        headerTintColor: '#fff'
-      }} />
+    <StatusBar backgroundColor="#2248f1" barStyle="light-content" />
+    <AuthStack.Navigator>
+      <AuthStack.Screen
+        name="SignIn"
+        component={SignIn}
+        options={{
+          title: 'Log In',
+          headerStyle: {
+            backgroundColor: '#2248f1',
+          },
+          headerTintColor: '#fff',
+        }}
+      />
     </AuthStack.Navigator>
   </>
-)
+);
 
-export default AuthRoutes
+export default AuthRoutes;

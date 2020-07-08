@@ -1,6 +1,12 @@
-import React from "react";
-import { Wrapper, Container, UserNameText, SignOutButton, SignOutLabel } from "./styles";
-import { useAuth } from "../../contexts/auth";
+import React from 'react';
+import {
+  Wrapper,
+  Container,
+  UserNameText,
+  SignOutButton,
+  SignOutLabel,
+} from './styles';
+import { useAuth } from '../../contexts/auth';
 
 const Dashboard: React.FC = () => {
   const { user, signOut } = useAuth();

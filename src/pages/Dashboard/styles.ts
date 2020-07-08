@@ -9,7 +9,7 @@ export const Container = styled.ScrollView.attrs(() => ({
   contentContainerStyle: {
     flexGrow: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 }))`
   padding: 15px;
