@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { Wrapper, Container, UserNameText, SignOutButton, SignOutLabel } from "./styles";
 import { useAuth } from "../../contexts/auth";
 
 const Dashboard: React.FC = () => {
@@ -10,19 +10,15 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>{user?.name}</Text>
-      <Button title="Sign Out" onPress={handleSignOut} />
-    </View>
+    <Wrapper>
+      <Container>
+        <UserNameText>Seja bem vindo, {user?.name}!</UserNameText>
+        <SignOutButton onPress={handleSignOut}>
+          <SignOutLabel>Sair do aplicativo</SignOutLabel>
+        </SignOutButton>
+      </Container>
+    </Wrapper>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
 
 export default Dashboard;

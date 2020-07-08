@@ -14,7 +14,7 @@ const SignIn: React.FC = () => {
   const [selectedValue, setSelectedValue] = useState("brazil");
   const [showPassword, setShowPassword] = useState(true);
 
-  const { signIn } = useAuth();
+  const { signIn, loading } = useAuth();
 
   function handleShowHideInput() {
     setShowPassword(!showPassword);
@@ -34,7 +34,7 @@ const SignIn: React.FC = () => {
             <StatePicker
               selectedValue={selectedValue}
               style={{ height: 50, width: 150 }}
-              onValueChange={itemValue => setSelectedValue(itemValue)}
+              onValueChange={(itemValue) => setSelectedValue(itemValue)}
             >
               <StatePicker.Item label="United States" value="us" />
               <StatePicker.Item label="Brazil" value="brazil" />
